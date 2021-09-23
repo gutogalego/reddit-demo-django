@@ -106,13 +106,6 @@ workflows:
                 - staging
           requires:
             - build
-      - deploy-alpha:
-          filters:
-            branches:
-              only:
-              - alpha
-          requires:
-          - build
       - deploy-production:
           filters:
             tags:
