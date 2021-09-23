@@ -24,7 +24,7 @@ LOAD_ENVS_FROM_FILE = True if os.environ.get('LOAD_ENVS_FROM_FILE', False) == 'T
 
 env_file = 'envs-production.json' if ENVIRONMENT == 'production' else 'envs-staging.json'
 if not LOAD_ENVS_FROM_FILE:
-    S3Environ(bucket='reddit-envs', key=env_file)
+    S3Environ(bucket='reddit-envs-gutogalego', key=env_file)
     print("Loading envs from S3: {0}".format(env_file))
 
 ###
@@ -298,3 +298,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 if not DEBUG and ENVIRONMENT != 'test':
     EMAIL_BACKEND = 'django_amazon_ses.EmailBackend'
     AWS_DEFAULT_REGION = 'us-west-2'
+
+#
