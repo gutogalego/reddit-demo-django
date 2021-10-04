@@ -297,5 +297,5 @@ DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 if not DEBUG and ENVIRONMENT != 'test':
     EMAIL_BACKEND = 'django_amazon_ses.EmailBackend'
-    AWS_DEFAULT_REGION = 'us-west-2'
+    AWS_DEFAULT_REGION = 'us-east-2'
 
